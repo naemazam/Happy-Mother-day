@@ -1,0 +1,142 @@
+body {
+  background: #000;
+}
+
+#wrapper {
+  overflow:hidden;
+  position:relative;
+  width: 700px;
+  height: 700px;
+  margin: 50px auto;
+}
+
+.frame {
+  width: 700px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+.heart{
+  stroke-dasharray: 2500;
+  stroke-dashoffset: 2500;
+  fill: transparent;
+  stroke: #fff;
+  animation: outer-line 3s linear forwards, fill-blue 0.15s linear forwards 3s;
+}
+
+@keyframes outer-line{
+  to{
+   stroke-dashoffset: 0;
+  }
+ }
+
+ @keyframes border{
+  to{
+   stroke-dashoffset: 0;
+   stroke: #F2385A;
+  }
+ }
+
+ @keyframes fill-blue{
+  from { 
+    fill: transparent;
+    stroke: #fff;
+  }
+  to { 
+    fill: #F2385A;
+    stroke: #F2385A;
+  }
+ }
+
+ .border{
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  fill: transparent;
+  stroke: #fff;
+  animation: border 3s linear forwards;
+}
+
+
+#mom {
+  animation: show-love 3s linear forwards 0s;
+}
+
+ @keyframes show-love{
+  from{
+    visibility: hidden;
+  opacity: 0;
+  fill: transparent;
+  }
+
+  to{
+   opacity: 1;
+   visibility: visible;
+   fill: #F2385A;
+  }
+ }
+
+ .message {
+  fill: red;
+  animation: pump 2s infinite 3s;
+  transform-origin: 70% 30%;
+ }
+
+ @keyframes pump {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+   transform: scale(1); 
+   opacity: 1;
+  }
+ }
+
+ .face-mom {
+  animation: move-face-mom 2s infinite 3s;
+ }
+
+  .face-baby {
+    animation: move-face-baby 2s infinite 3s;
+   }
+
+ @keyframes move-face-mom {
+  from {
+    transform:translateX(0) rotate(0);
+  }
+  to {
+    transform:translateX(5px) rotate(0.5deg);
+  }
+ }
+
+
+ @keyframes move-face-baby {
+  from {
+    transform:translateX(0) rotate(0);
+  }
+  to {
+    transform:translate(-6px,8px) rotate(-1deg);
+  }
+ }
+
+ .white-text {
+  animation: show-text 0.5s linear forwards 3s;
+ }
+
+ @keyframes show-text {
+  0% {
+    opacity: 0;
+    fill: transparent;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    fill: white;
+    visibility: visible;
+  }
+ }
+
+ .text-mom {
+  animation: show-text 0.5s linear forwards 3s;
+ }
